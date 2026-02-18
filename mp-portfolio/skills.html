@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Marthi Pavana Srikanth</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        /* Section Spacing */
+        .skill-section {
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Core Competencies Grid */
+        .core-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .core-card {
+            padding: 2.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .core-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(0, 229, 160, 0.1);
+            color: var(--accent-teal);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .core-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .proficiency-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-teal);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-category h4 {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .tool-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .tool-pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .tool-pill:hover {
+            border-color: var(--accent-teal);
+            background: rgba(0, 229, 160, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Tag Cloud */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tag-cloud-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            transition: var(--transition-smooth);
+            cursor: default;
+        }
+
+        .tag-cloud-item:hover {
+            border-color: var(--glass-shine);
+            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Top Header Bar (Theme Toggle) -->
+    <div class="top-header-bar">
+        <div id="theme-toggle" class="theme-pill" aria-label="Toggle Theme">
+            <i data-feather="moon"></i>
+        </div>
+    </div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <header class="navbar">
+        <!-- Nav Links Group Bubble -->
+        <nav class="nav-pill-group">
+            <a href="index.html" class="nav-link-item">Home</a>
+            <a href="experience.html" class="nav-link-item">Experience</a>
+            <a href="certifications.html" class="nav-link-item">Certifications</a>
+            <a href="skills.html" class="nav-link-item active">Skills</a>
+            <a href="education.html" class="nav-link-item">Education</a>
+            <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <main class="container">
+        <section class="page-header reveal">
+            <span class="mono-label">TOOLKIT</span>
+            <h1>Skills & Expertise</h1>
+        </section>
+
+        <!-- Section 1: Core Competencies -->
+        <section class="skill-section reveal">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="core-grid">
+
+                <div class="glass-panel core-card">
+                    <div class="core-icon"><i data-feather="check-square"></i></div>
+                    <h3>AI Quality Operations</h3>
+                    <p class="core-desc">LLM evaluation, factuality & grounding, content accuracy assessments.</p>
+                    <div style="margin-top:auto;">
+                        <div class="proficiency-label"><span>Proficiency</span> <span>Expert</span></div>
+                        <div class="prof-bar-container">
+                            <div class="prof-bar-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel core-card">
+                    <div class="core-icon"><i data-feather="shield"></i></div>
+                    <h3>Content Moderation</h3>
+                    <p class="core-desc">CSAM policy, abuse detection, enforcement protocols, Trust & Safety.</p>
+                    <div style="margin-top:auto;">
+                        <div class="proficiency-label"><span>Proficiency</span> <span>Expert</span></div>
+                        <div class="prof-bar-container">
+                            <div class="prof-bar-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel core-card">
+                    <div class="core-icon"><i data-feather="sliders"></i></div>
+                    <h3>Process Optimization</h3>
+                    <p class="core-desc">Workflow design, quality frameworks, creating scalable operational systems.</p>
+                    <div style="margin-top:auto;">
+                        <div class="proficiency-label"><span>Proficiency</span> <span>Advanced</span></div>
+                        <div class="prof-bar-container">
+                            <div class="prof-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel core-card">
+                    <div class="core-icon"><i data-feather="briefcase"></i></div>
+                    <h3>Business Process Mgmt</h3>
+                    <p class="core-desc">Cross-functional collaboration, operational analytics, stakeholder mgmt.</p>
+                    <div style="margin-top:auto;">
+                        <div class="proficiency-label"><span>Proficiency</span> <span>Advanced</span></div>
+                        <div class="prof-bar-container">
+                            <div class="prof-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel core-card">
+                    <div class="core-icon"><i data-feather="bar-chart-2"></i></div>
+                    <h3>Data Analytics</h3>
+                    <p class="core-desc">Precision/Recall reporting, pattern detection, advanced Excel analysis.</p>
+                    <div style="margin-top:auto;">
+                        <div class="proficiency-label"><span>Proficiency</span> <span>Advanced</span></div>
+                        <div class="prof-bar-container">
+                            <div class="prof-bar-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel core-card">
+                    <div class="core-icon"><i data-feather="server"></i></div>
+                    <h3>AI Infrastructure</h3>
+                    <p class="core-desc">MLOps fundamentals, NVIDIA stack, cloud operations (OCI/GCP).</p>
+                    <div style="margin-top:auto;">
+                        <div class="proficiency-label"><span>Proficiency</span> <span>Intermediate</span></div>
+                        <div class="prof-bar-container">
+                            <div class="prof-bar-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 2: Tools & Platforms -->
+        <section class="skill-section reveal">
+            <h2 class="section-title">Tools & Platforms</h2>
+            <div class="glass-panel">
+                <div class="tools-grid">
+
+                    <div class="tool-category">
+                        <h4>Evaluation Platforms</h4>
+                        <div class="tool-pills">
+                            <span class="tool-pill">UHRS</span>
+                            <span class="tool-pill">SageProbe</span>
+                            <span class="tool-pill">Cases Connect</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-category">
+                        <h4>Workflow Tools</h4>
+                        <div class="tool-pills">
+                            <span class="tool-pill">Firebolt</span>
+                            <span class="tool-pill">Crowdcompute</span>
+                            <span class="tool-pill">Advanced Excel</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-category">
+                        <h4>AI & Cloud</h4>
+                        <div class="tool-pills">
+                            <span class="tool-pill">NVIDIA AI Stack</span>
+                            <span class="tool-pill">Oracle OCI</span>
+                            <span class="tool-pill">Google Cloud</span>
+                            <span class="tool-pill">LLM Eval Tools</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-category">
+                        <h4>Analytics</h4>
+                        <div class="tool-pills">
+                            <span class="tool-pill">IBM SPSS</span>
+                            <span class="tool-pill">IBM Cognos</span>
+                            <span class="tool-pill">Precision/Recall</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Domain Expertise -->
+        <section class="skill-section reveal">
+            <h2 class="section-title" style="justify-content: center;">Domain Expertise</h2>
+            <div class="tag-cloud">
+                <span class="tag-cloud-item tag-lg">Content Quality</span>
+                <span class="tag-cloud-item tag-md">Editorial Standards</span>
+                <span class="tag-cloud-item tag-lg">AI Safety</span>
+                <span class="tag-cloud-item tag-lg">Trust & Safety</span>
+                <span class="tag-cloud-item tag-md">Deepfake Detection</span>
+                <span class="tag-cloud-item tag-md">PII Protection</span>
+                <span class="tag-cloud-item tag-lg">CSAM Policy</span>
+                <span class="tag-cloud-item tag-md">Hate Speech Enforcement</span>
+                <span class="tag-cloud-item tag-sm">MIR Protocols</span>
+                <span class="tag-cloud-item tag-lg">Pattern-based Abuse Detection</span>
+                <span class="tag-cloud-item tag-md">Phishing Detection</span>
+                <span class="tag-cloud-item tag-md">Cross-functional Collaboration</span>
+                <span class="tag-cloud-item tag-lg">SME Leadership</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-glass">
+            <span class="copyright">Marthi Pavana Srikanth © 2025</span>
+            <div class="social-float">
+                <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                        data-feather="linkedin"></i></a>
+                <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+
+</html>

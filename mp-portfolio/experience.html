@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Marthi Pavana Srikanth</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-Specific Styles */
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .timeline-section {
+            padding-bottom: 8rem;
+            position: relative;
+        }
+
+        /* Timeline Line */
+        .timeline-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--glass-border), transparent);
+            z-index: -1;
+        }
+
+        .timeline-item {
+            margin-bottom: 6rem;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-card {
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .company-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge-msft {
+            background: rgba(0, 120, 212, 0.2);
+            color: #0078d4;
+            border: 1px solid rgba(0, 120, 212, 0.3);
+        }
+
+        .badge-goog {
+            background: rgba(234, 67, 53, 0.2);
+            color: #ea4335;
+            border: 1px solid rgba(234, 67, 53, 0.3);
+        }
+
+        /* Red/Multi simplified */
+        .badge-sasi {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+        }
+
+        .company-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            color: var(--accent-teal);
+            font-family: var(--font-mono);
+            margin-bottom: 0.5rem;
+        }
+
+        .period-location {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .status-pill {
+            background: rgba(0, 229, 160, 0.15);
+            color: var(--accent-teal);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(0, 229, 160, 0.3);
+            box-shadow: 0 0 15px rgba(0, 229, 160, 0.2);
+            animation: pulse-green 3s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 229, 160, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 229, 160, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 229, 160, 0);
+            }
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .highlight-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .highlight-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .highlight-icon {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .responsibilities h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .responsibilities ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+
+        .responsibilities li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .responsibilities li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+        }
+
+        .tools-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .tool-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+            transition: var(--transition-smooth);
+        }
+
+        .tool-pill:hover {
+            border-color: var(--accent-teal);
+            color: var(--accent-teal);
+            transform: translateY(-2px);
+        }
+
+        /* Google Special Cards */
+        .special-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .special-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red {
+            background: #ea4335;
+            box-shadow: 0 0 8px rgba(234, 67, 53, 0.4);
+        }
+
+        .dot-orange {
+            background: #fbbc04;
+            box-shadow: 0 0 8px rgba(251, 188, 4, 0.4);
+        }
+
+        .dot-yellow {
+            background: #ffe047;
+            box-shadow: 0 0 8px rgba(255, 224, 71, 0.4);
+        }
+
+        .dot-blue {
+            background: #4285f4;
+            box-shadow: 0 0 8px rgba(66, 133, 244, 0.4);
+        }
+
+        .dot-purple {
+            background: #a142f4;
+            box-shadow: 0 0 8px rgba(161, 66, 244, 0.4);
+        }
+
+        .dot-black {
+            background: #5f6368;
+            box-shadow: 0 0 8px rgba(95, 99, 104, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-section::before {
+                left: 20px;
+            }
+
+            .company-header {
+                flex-direction: column;
+            }
+
+            .status-pill {
+                align-self: flex-start;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Header Bar (Theme Toggle) -->
+    <div class="top-header-bar">
+        <div id="theme-toggle" class="theme-pill" aria-label="Toggle Theme">
+            <i data-feather="moon"></i>
+        </div>
+    </div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <header class="navbar">
+        <!-- Nav Links Group Bubble -->
+        <nav class="nav-pill-group">
+            <a href="index.html" class="nav-link-item">Home</a>
+            <a href="experience.html" class="nav-link-item active">Experience</a>
+            <a href="certifications.html" class="nav-link-item">Certifications</a>
+            <a href="skills.html" class="nav-link-item">Skills</a>
+            <a href="education.html" class="nav-link-item">Education</a>
+            <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+
+        <!-- Page Header -->
+        <section class="page-header container reveal">
+            <span class="mono-label">CAREER JOURNEY</span>
+            <h1>Where I've Built & Delivered</h1>
+            <p style="margin-top: 1rem;">2+ years across Microsoft and Google ecosystems</p>
+        </section>
+
+        <!-- Currently Open To Section -->
+        <section class="open-to-section container">
+            <div class="glass-panel open-to-card reveal" style="position: relative;">
+                <h3>Open to Product Operations, Business Operations, and Content Operations roles.</h3>
+
+                <div class="status-badge" style="position: absolute; bottom: 2rem; right: 2rem;">
+                    <div class="status-dot"></div>
+                    Available for opportunities
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section container">
+
+            <!-- MICROSOFT -->
+            <div class="timeline-item reveal">
+                <div class="glass-panel timeline-card">
+                    <!-- Microsoft Logo -->
+                    <img src="Microsoft_logo.png" alt="Microsoft Logo" class="card-logo">
+
+                    <div class="company-header">
+                        <div style="display: flex; align-items: start;">
+                            <div class="company-badge badge-msft">MSFT</div>
+                            <div class="company-info">
+                                <h2>Microsoft (via Wipro)</h2>
+                                <div class="role-title">Senior Associate & SME — Copilot & MSN Content Operations</div>
+                                <div class="period-location">April 2025 – Present | Hyderabad</div>
+                            </div>
+                        </div>
+                        <div class="status-pill">CURRENT ROLE</div>
+                    </div>
+
+                    <div class="highlights-grid">
+                        <div class="highlight-card">🚀 Promoted to Senior Associate in 1 month (standard: 6–12 months)
+                        </div>
+                        <div class="highlight-card">🏆 SME designation in <span class="impact-metric">4 Months</span>
+                            total (fastest in cohort)</div>
+                        <div class="highlight-card">📊 <span class="impact-metric">98% Quality Audit Accuracy</span>
+                            achieved</div>
+                        <div class="highlight-card">🌍 Quality framework impacts millions of daily users</div>
+                        <div class="highlight-card">⚡ 15% improvement in content relevance</div>
+                        <div class="highlight-card">🎯 Pilot batch member — selected from 100+ candidates</div>
+                    </div>
+
+                    <div class="responsibilities">
+                        <h3>Key Responsibilities</h3>
+                        <ul>
+                            <li>Leading reevaluation pipeline for flagged cases/gems</li>
+                            <li>Dual-platform quality architecture: UHRS + SageProbe</li>
+                            <li>Implementing dual-futureproofing framework</li>
+                            <li>Monitoring cross-platform quality patterns</li>
+                            <li>Translating editorial quality findings into AI model improvements</li>
+                        </ul>
+                    </div>
+
+                    <div class="tools-row">
+                        <span class="tool-pill">UHRS</span>
+                        <span class="tool-pill">SageProbe</span>
+                        <span class="tool-pill">Microsoft Copilot</span>
+                        <span class="tool-pill">MSN</span>
+                        <span class="tool-pill">Editorial QA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GOOGLE -->
+            <div class="timeline-item reveal">
+                <div class="glass-panel timeline-card">
+                    <!-- Google Logo -->
+                    <img src="Google_logo.png" alt="Google Logo" class="card-logo">
+
+                    <div class="company-header">
+                        <div style="display: flex; align-items: start;">
+                            <div class="company-badge badge-goog">GOOG</div>
+                            <div class="company-info">
+                                <h2>Google Trust & Safety (via Wipro)</h2>
+                                <div class="role-title">Senior Associate & SME — Modern Creator Format</div>
+                                <div class="period-location">October 2023 – May 2025 | Hyderabad</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-cards-grid">
+                        <div class="special-card"><span class="shield-icon"><i data-feather="shield"></i> CSAM</span>
+                            Detection & Removal</div>
+                        <div class="special-card"><span class="dot dot-orange"></span> MIR & Protection</div>
+                        <div class="special-card"><span class="shield-icon"><i data-feather="shield"></i>
+                                Deepfake</span> Identification</div>
+                        <div class="special-card"><span class="shield-icon"><i data-feather="shield"></i> PII</span>
+                            Violations</div>
+                        <div class="special-card"><span class="dot dot-purple"></span> Hate Speech</div>
+                        <div class="special-card"><span class="dot dot-black"></span> Pornographic Enforcement</div>
+                    </div>
+
+                    <div class="highlights-grid">
+                        <div class="highlight-card">⭐ Earned "Outstanding Performance" rating</div>
+                        <div class="highlight-card">🎯 Selected for Cases Connect elite team (Top 10 in org)</div>
+                        <div class="highlight-card">✅ 95%+ accuracy | Zero false negatives</div>
+                        <div class="highlight-card">📈 <span class="impact-metric">20% New-Hire Onboarding
+                                Acceleration</span> via knowledge transfer</div>
+                        <div class="highlight-card">📋 1000+ monthly escalations processed</div>
+                        <div class="highlight-card">📝 Built trust protocols adopted across enforcement team</div>
+                    </div>
+
+                    <div style="margin-top: 2rem;" class="tools-row">
+                        <span class="tool-pill">Cases Connect</span>
+                        <span class="tool-pill">Firebolt</span>
+                        <span class="tool-pill">Crowdcompute</span>
+                        <span class="tool-pill">Precision/Recall Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SASI INSTITUTE -->
+            <div class="timeline-item reveal">
+                <div class="glass-panel timeline-card">
+                    <div class="company-header">
+                        <div style="display: flex; align-items: start;">
+                            <div class="company-badge badge-sasi">SASI</div>
+                            <div class="company-info">
+                                <h2>Sasi Institute of Technology & Engineering</h2>
+                                <div class="role-title">Associate Editor</div>
+                                <div class="period-location">August 2020 – April 2023 | Tadepalligudem, AP</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Managed college magazine editorial standards alongside B.Tech studies, ensuring high-quality
+                        content accuracy and publication deadlines.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="footer-glass">
+            <span class="copyright">Marthi Pavana Srikanth © 2025</span>
+            <div class="social-float">
+                <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                        data-feather="linkedin"></i></a>
+                <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

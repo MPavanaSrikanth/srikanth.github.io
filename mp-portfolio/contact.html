@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Marthi Pavana Srikanth</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .contact-info-card {
+            padding: 2.5rem;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .contact-row:hover {
+            border-color: var(--accent-teal);
+            background: rgba(0, 229, 160, 0.05);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            color: var(--accent-teal);
+        }
+
+        .avail-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(52, 199, 89, 0.1);
+            color: #34c759;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(52, 199, 89, 0.2);
+        }
+
+        .looking-for-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .looking-for-item {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .looking-for-item i {
+            color: #34c759;
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Top Header Bar (Theme Toggle) -->
+    <div class="top-header-bar">
+        <div id="theme-toggle" class="theme-pill" aria-label="Toggle Theme">
+            <i data-feather="moon"></i>
+        </div>
+    </div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <header class="navbar">
+        <!-- Nav Links Group Bubble -->
+        <nav class="nav-pill-group">
+            <a href="index.html" class="nav-link-item">Home</a>
+            <a href="experience.html" class="nav-link-item">Experience</a>
+            <a href="certifications.html" class="nav-link-item">Certifications</a>
+            <a href="skills.html" class="nav-link-item">Skills</a>
+            <a href="education.html" class="nav-link-item">Education</a>
+            <a href="contact.html" class="nav-link-item active">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <main class="container">
+        <section class="page-header reveal">
+            <span class="mono-label">LET'S CONNECT</span>
+            <h1>Open to Opportunities</h1>
+            <p>Product Operations | Business Operations | Content Operations</p>
+        </section>
+
+        <section class="contact-layout reveal">
+
+            <!-- Left: Info -->
+            <div class="glass-panel contact-info-card">
+                <div class="avail-badge">
+                    <span class="pulsing-dot dot-green"></span> Open to opportunities
+                </div>
+                <p style="margin-bottom: 2rem;">Currently based in Hyderabad, Telangana, India</p>
+
+                <a href="mailto:srikanthmpavana@gmail.com" class="contact-row">
+                    <i data-feather="mail" class="contact-icon"></i>
+                    <span>srikanthmpavana@gmail.com</span>
+                </a>
+
+                <a href="tel:+919491066670" class="contact-row">
+                    <i data-feather="phone" class="contact-icon"></i>
+                    <span>+91 9491066670</span>
+                </a>
+
+                <a href="https://linkedin.com/in/mpsrikanth" target="_blank" class="contact-row">
+                    <i data-feather="linkedin" class="contact-icon"></i>
+                    <span>linkedin.com/in/mpsrikanth</span>
+                </a>
+
+                <div class="contact-row" style="cursor: default; border:none; background:none; padding: 0;">
+                    <i data-feather="map-pin" class="contact-icon"></i>
+                    <span>Hyderabad, Telangana, India</span>
+                </div>
+
+                <div style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                    <h4 style="margin-bottom: 1rem;">Looking For:</h4>
+                    <ul class="looking-for-list">
+                        <li class="looking-for-item"><i data-feather="check"></i> Product Operations roles</li>
+                        <li class="looking-for-item"><i data-feather="check"></i> Business Operations roles</li>
+                        <li class="looking-for-item"><i data-feather="check"></i> Content Operations roles</li>
+                        <li class="looking-for-item"><i data-feather="check"></i> AI Quality & Process roles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="glass-panel contact-info-card">
+                <h3 style="margin-bottom: 2rem;">Send a Message</h3>
+                <form action="mailto:srikanthmpavana@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-textarea" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;">Prefer LinkedIn?</span>
+                        <a href="https://linkedin.com/in/mpsrikanth" class="btn btn-secondary"
+                            style="margin-left: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Connect directly →</a>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-glass">
+            <span class="copyright">Marthi Pavana Srikanth © 2025</span>
+            <div class="social-float">
+                <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                        data-feather="linkedin"></i></a>
+                <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+
+</html>

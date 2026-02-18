@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marthi Pavana Srikanth | Product Operations Specialist</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Targeted Fix for Frosted Glass Navbar on Index Only -->
+    <style>
+        .navbar {
+            transform: translateZ(0) !important;
+            isolation: isolate !important;
+        }
+
+        /* Ensure content behind navbar supports backdrop-filter */
+        .hero,
+        .hero-content,
+        main {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        /* Responsive stack fix for index-specific styles if needed */
+        @media (max-width: 900px) {
+            .navbar {
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Aero-Liquid Background (Texture via CSS) -->
+
+
+    <!-- Top Header Bar (Theme Toggle) -->
+    <div class="top-header-bar">
+        <div id="theme-toggle" class="theme-pill" aria-label="Toggle Theme">
+            <i data-feather="moon"></i>
+        </div>
+    </div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <header class="navbar">
+        <!-- Nav Links Group Bubble -->
+        <nav class="nav-pill-group">
+            <a href="index.html" class="nav-link-item active">Home</a>
+            <a href="experience.html" class="nav-link-item">Experience</a>
+            <a href="certifications.html" class="nav-link-item">Certifications</a>
+            <a href="skills.html" class="nav-link-item">Skills</a>
+            <a href="education.html" class="nav-link-item">Education</a>
+            <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content reveal">
+                <span class="mono-label">Welcome to my portfolio</span>
+                <h1 class="hero-name">MARTHI PAVANA SRIKANTH</h1>
+
+                <div class="hero-subtitle-wrapper">
+                    <span class="hero-subtitle" id="typewriter"></span>
+                </div>
+
+                <div class="location-badge">
+                    <i data-feather="map-pin" style="width: 14px; margin-right: 6px;"></i> Hyderabad, India
+                </div>
+
+                <div class="hero-cta">
+                    <a href="experience.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+
+                <!-- Professional Suit Photo Card -->
+                <div class="hero-image-card glass-panel">
+                    <img src="/Users/marthipavanasrikanth/.gemini/antigravity/brain/792bccbf-4d1c-4081-acd8-bdb6c2fab9f0/profile_suit_1771355695994.png"
+                        alt="Marthi Pavana Srikanth">
+                </div>
+
+                <div class="social-float">
+                    <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                            data-feather="linkedin"></i></a>
+                    <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <i data-feather="arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- Bio / About Section -->
+        <section class="about-section container">
+            <div class="glass-panel about-card reveal">
+                <div class="profile-initials-wrapper">
+                    <div class="profile-initials">MPS</div>
+                </div>
+                <div class="bio-text">
+                    <p>I optimize product operations and quality workflows for AI platforms at scale. Currently
+                        supporting <strong>Microsoft Copilot</strong> and <strong>MSN content operations</strong> —
+                        designing evaluation frameworks, managing cross-functional quality processes, and driving
+                        operational improvements that impact millions of users daily.</p>
+
+                    <p>Previously led platform operations for <strong>Google's Trust & Safety</strong> ecosystem,
+                        managing high-sensitivity enforcement cases with 95%+ accuracy and building processes that
+                        accelerated team performance by 20%.</p>
+
+                    <p>With a Computer Science background and deep expertise in AI product operations, I specialize in
+                        translating complex product requirements into scalable, high-quality operational systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section container">
+            <div class="stats-grid">
+                <div class="glass-panel stat-card reveal">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="glass-panel stat-card reveal" style="transition-delay: 100ms;">
+                    <span class="stat-number">95%+</span>
+                    <span class="stat-label">Accuracy Rate</span>
+                </div>
+                <div class="glass-panel stat-card reveal" style="transition-delay: 200ms;">
+                    <span class="stat-number">1k+</span>
+                    <span class="stat-label">Monthly Cases</span>
+                </div>
+                <div class="glass-panel stat-card reveal" style="transition-delay: 300ms;">
+                    <span class="stat-number">Millions</span>
+                    <span class="stat-label">Users Impacted</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Currently Open To Section -->
+        <section class="open-to-section container">
+            <div class="glass-panel open-to-card reveal">
+                <div class="status-badge">
+                    <div class="status-dot"></div>
+                    Available for opportunities
+                </div>
+                <h3>Open to Product Operations, Business Operations, and Content Operations roles.</h3>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links-section container">
+            <div class="links-grid">
+                <a href="experience.html" class="glass-panel link-card reveal">
+                    <h3>View Experience</h3>
+                    <i data-feather="arrow-right" class="arrow-icon"></i>
+                </a>
+                <a href="certifications.html" class="glass-panel link-card reveal" style="transition-delay: 100ms;">
+                    <h3>View Certifications</h3>
+                    <i data-feather="arrow-right" class="arrow-icon"></i>
+                </a>
+                <a href="skills.html" class="glass-panel link-card reveal" style="transition-delay: 200ms;">
+                    <h3>View Skills</h3>
+                    <i data-feather="arrow-right" class="arrow-icon"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="footer-glass">
+            <span class="copyright">Marthi Pavana Srikanth © 2025</span>
+            <div class="social-float">
+                <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                        data-feather="linkedin"></i></a>
+                <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

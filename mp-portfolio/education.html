@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Marthi Pavana Srikanth</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        /* Main Education Card */
+        .edu-main-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--accent-teal);
+            margin-bottom: 4rem;
+        }
+
+        .edu-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .edu-icon-lg {
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 229, 160, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-teal);
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            box-shadow: 0 0 30px rgba(0, 229, 160, 0.2);
+        }
+
+        .edu-degree {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-inst {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .edu-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .meta-pill {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--accent-teal);
+        }
+
+        /* Prior Education Grid */
+        .prior-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .prior-card {
+            padding: 2rem;
+            border-left: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .prior-title {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .prior-inst {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prior-year {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-teal);
+        }
+
+        /* Timeline Section */
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        /* Beyond Academics */
+        .beyond-card {
+            text-align: center;
+            padding: 3rem;
+            border: 1px dashed var(--glass-border);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Top Header Bar (Theme Toggle) -->
+    <div class="top-header-bar">
+        <div id="theme-toggle" class="theme-pill" aria-label="Toggle Theme">
+            <i data-feather="moon"></i>
+        </div>
+    </div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <header class="navbar">
+        <!-- Nav Links Group Bubble -->
+        <nav class="nav-pill-group">
+            <a href="index.html" class="nav-link-item">Home</a>
+            <a href="experience.html" class="nav-link-item">Experience</a>
+            <a href="certifications.html" class="nav-link-item">Certifications</a>
+            <a href="skills.html" class="nav-link-item">Skills</a>
+            <a href="education.html" class="nav-link-item active">Education</a>
+            <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <main class="container">
+        <section class="page-header reveal">
+            <span class="mono-label">ACADEMIC BACKGROUND</span>
+            <h1>Education & Formation</h1>
+        </section>
+
+        <!-- Main Degree -->
+        <section class="edu-main-card reveal">
+            <!-- College Logo -->
+            <img src="sasi.png" alt="SASI Logo" class="card-logo">
+
+            <div class="edu-wrapper">
+                <div class="edu-icon-lg"><i data-feather="book-open"></i></div>
+                <h2 class="edu-degree">Bachelor of Technology in Computer Science and Engineering</h2>
+                <div class="edu-inst">Sasi Institute of Technology & Engineering</div>
+
+                <div class="edu-meta">
+                    <span class="meta-pill"><i data-feather="calendar" style="width:14px;"></i> Aug 2019 – May
+                        2023</span>
+                    <span class="meta-pill"><i data-feather="map-pin" style="width:14px;"></i> Tadepalligudem, AP</span>
+                </div>
+
+                <div class="edu-details" style="max-width: 700px; margin: 0 auto; text-align: left;">
+                    <ul class="responsibilities" style="list-style: none; padding-left: 0;">
+                        <li
+                            style="margin-bottom: 0.8rem; color: var(--text-secondary); position: relative; padding-left: 1.5rem;">
+                            Specialized in AI Ethics, Data Structures, and Algorithm Design.
+                        </li>
+                        <li
+                            style="margin-bottom: 0.8rem; color: var(--text-secondary); position: relative; padding-left: 1.5rem;">
+                            Served as Associate Editor for the college magazine, managing editorial workflows and
+                            content quality.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prior Education -->
+        <section class="prior-grid reveal">
+            <div class="glass-panel prior-card">
+                <div class="prior-title">Intermediate (MPC)</div>
+                <div class="prior-inst">Sri Chaitanya Junior Kalasala</div>
+                <div class="prior-year">2017 – 2019</div>
+            </div>
+
+            <div class="glass-panel prior-card">
+                <div class="prior-title">SSC (Secondary School)</div>
+                <div class="prior-inst">Bhashyam High School</div>
+                <div class="prior-year">Jun 2014 – Mar 2017</div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline-container reveal">
+            <h3 style="margin-bottom: 2rem; text-align: center;">My Learning Journey</h3>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2017</span>
+                <p>Completed SSC (Secondary School Certificate)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2019</span>
+                <p>Completed Intermediate (Maths, Physics, Chemistry)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2020</span>
+                <p>Started B.Tech CSE + began editorial work for College Magazine</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2023</span>
+                <p>Graduated B.Tech + Joined Google Trust & Safety (via Wipro)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2025</span>
+                <p>Joined Microsoft Copilot & MSN (via Wipro)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">Present</span>
+                <p>Continuously upskilling in AI, Cloud, and Cybersecurity</p>
+            </div>
+        </section>
+
+        <!-- Beyond Academics -->
+        <section class="glass-panel beyond-card reveal">
+            <h3>Beyond Academics</h3>
+            <p style="max-width: 700px; margin: 1.5rem auto 0;">
+                Bridged Computer Science theory with real-world AI operations, pursued a self-driven certification path
+                in Cloud & Cybersec,
+                and honed communication skills as an Associate Editor.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-glass">
+            <span class="copyright">Marthi Pavana Srikanth © 2025</span>
+            <div class="social-float">
+                <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                        data-feather="linkedin"></i></a>
+                <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications | Marthi Pavana Srikanth</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cert-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .cert-card-detailed h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .cert-issuer {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-code {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .cert-status {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .status-earned {
+            color: #34c759;
+        }
+
+        .status-progress {
+            color: #ff9500;
+        }
+
+        /* Progress Bar Section */
+        .learning-path-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .path-step {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .path-step.active {
+            opacity: 1;
+        }
+
+        .path-step.completed {
+            opacity: 0.8;
+            color: var(--accent-teal);
+        }
+
+        .progress-track {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .progress-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: var(--accent-teal);
+            border-radius: 4px;
+            width: 85%;
+            /* Just an example percentage */
+            box-shadow: 0 0 10px var(--accent-teal);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Top Header Bar (Theme Toggle) -->
+    <div class="top-header-bar">
+        <div id="theme-toggle" class="theme-pill" aria-label="Toggle Theme">
+            <i data-feather="moon"></i>
+        </div>
+    </div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <header class="navbar">
+        <!-- Nav Links Group Bubble -->
+        <nav class="nav-pill-group">
+            <a href="index.html" class="nav-link-item">Home</a>
+            <a href="experience.html" class="nav-link-item">Experience</a>
+            <a href="certifications.html" class="nav-link-item active">Certifications</a>
+            <a href="skills.html" class="nav-link-item">Skills</a>
+            <a href="education.html" class="nav-link-item">Education</a>
+            <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <main class="container">
+        <section class="page-header reveal">
+            <span class="mono-label">CREDENTIALS</span>
+            <h1>Certifications & Qualifications</h1>
+            <p>Continuously upskilling across AI, Cloud & Security</p>
+        </section>
+
+        <!-- Earned Certs -->
+        <h3 class="section-header reveal"><i data-feather="check-circle" style="color: #34c759;"></i> Earned</h3>
+        <section class="masonry-grid reveal">
+
+            <!-- Oracle AI Foundations -->
+            <div class="glass-panel glass-red cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(255, 59, 48, 0.2); color: #ff3b30;">O</div>
+                    <h3>Oracle Cloud Infrastructure 2024 AI Foundations Associate</h3>
+                    <div class="cert-issuer">Oracle</div>
+                    <span class="cert-code">Code: 1Z0-1122-24</span>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+            <!-- NVIDIA AI Infra -->
+            <div class="glass-panel glass-green cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(52, 199, 89, 0.2); color: #34c759;">N</div>
+                    <h3>AI Infrastructure and Operations Fundamentals</h3>
+                    <div class="cert-issuer">NVIDIA (via Coursera)</div>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+            <!-- Diffusion Models -->
+            <div class="glass-panel glass-green cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(52, 199, 89, 0.2); color: #34c759;">N</div>
+                    <h3>Generative AI with Diffusion Models</h3>
+                    <div class="cert-issuer">NVIDIA</div>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+            <!-- OCI GenAI Pro -->
+            <div class="glass-panel glass-red cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(255, 59, 48, 0.2); color: #ff3b30;">O</div>
+                    <h3>OCI Generative AI Professional</h3>
+                    <div class="cert-issuer">Oracle</div>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+            <!-- OPSWAT ICIP -->
+            <div class="glass-panel glass-blue cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(0, 122, 255, 0.2); color: #007aff;">O</div>
+                    <h3>Intro to Critical Infrastructure Protection (ICIP)</h3>
+                    <div class="cert-issuer">OPSWAT</div>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+            <!-- Cyber Fundamentals -->
+            <div class="glass-panel glass-purple cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(175, 82, 222, 0.2); color: #af52de;">C</div>
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <div class="cert-issuer">Independent</div>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+            <!-- E-Commerce -->
+            <div class="glass-panel glass-indigo cert-card-detailed">
+                <div>
+                    <div class="cert-badge" style="background: rgba(88, 86, 214, 0.2); color: #5856d6;">E</div>
+                    <h3>E-Commerce Level 1</h3>
+                    <div class="cert-issuer">Participation</div>
+                </div>
+                <div class="cert-status status-earned">
+                    <span class="pulsing-dot dot-green"></span> EARNED
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Google Cyber -->
+        <div class="glass-panel glass-amber cert-card-detailed">
+            <div>
+                <div class="cert-badge" style="background: rgba(255, 149, 0, 0.2); color: #ff9500;">G</div>
+                <h3>Google Cloud Cybersecurity Certificate</h3>
+                <div class="cert-issuer">Google</div>
+            </div>
+            <div class="cert-status status-earned">
+                <span class="pulsing-dot dot-green"></span> EARNED
+            </div>
+        </div>
+
+        </section>
+
+        <!-- In Progress -->
+        <h3 class="section-header reveal" style="display:none;"><i data-feather="loader" style="color: #ff9500;"></i> In
+            Progress</h3>
+        <section class="masonry-grid reveal" style="display:none;">
+            <!-- Placeholder for future in-progress items -->
+        </section>
+
+        <!-- Learning Path -->
+        <section class="learning-path-card reveal">
+            <h3><i data-feather="map"></i> AI & Cloud Specialization Path</h3>
+            <div class="progress-track">
+                <div class="progress-indicator"></div>
+            </div>
+            <div
+                style="display: flex; justify-content: space-between; margin-top: 1rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+                <span>Fundamentals</span>
+                <span>Associate</span>
+                <span>Professional</span>
+                <span>Expert</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-glass">
+            <span class="copyright">Marthi Pavana Srikanth © 2025</span>
+            <div class="social-float">
+                <a href="https://linkedin.com/in/mpsrikanth" class="social-icon" target="_blank"><i
+                        data-feather="linkedin"></i></a>
+                <a href="mailto:srikanthmpavana@gmail.com" class="social-icon"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+
+</html>
